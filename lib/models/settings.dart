@@ -9,7 +9,6 @@ class Settings extends HiveObject {
     this.isNotificationEnabled = true,
   });
 
-  // 手动实现序列化
   Map<String, dynamic> toMap() {
     return {
       'isDarkMode': isDarkMode,
@@ -17,7 +16,6 @@ class Settings extends HiveObject {
     };
   }
 
-  // 手动实现反序列化
   factory Settings.fromMap(Map<String, dynamic> map) {
     return Settings(
       isDarkMode: map['isDarkMode'] ?? false,

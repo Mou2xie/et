@@ -3,7 +3,7 @@ import 'settings.dart';
 
 class SettingsAdapter extends TypeAdapter<Settings> {
   @override
-  final int typeId = 0; // 必须唯一
+  final int typeId = 0; // unique identifier
 
   @override
   Settings read(BinaryReader reader) {

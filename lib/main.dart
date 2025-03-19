@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'models/settings.dart';
-import 'models/settings_adapter.dart'; // 导入适配器
+import 'models/settings_adapter.dart';
 import 'pages/home.dart';
 
 void main() async {
   await Hive.initFlutter();
 
-  // 手动注册适配器
+  // register adapter
   Hive.registerAdapter(SettingsAdapter());
 
-  // 打开 Hive Box
+  // open box
   await Hive.openBox<Settings>('settings');
 
   runApp(MyApp());

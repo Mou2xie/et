@@ -12,7 +12,7 @@ class _AddExpensePageState extends State<AddExpensePage> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _amountController = TextEditingController();
-  String _category = '日常';
+  String _category = 'Daily';
   DateTime _date = DateTime.now();
 
   Future<void> _selectDate(BuildContext context) async {
@@ -71,7 +71,7 @@ class _AddExpensePageState extends State<AddExpensePage> {
                     _category = newValue!;
                   });
                 },
-                items: <String>['日常', '娱乐', '购物', '工作', '学习', '其他']
+                items: <String>['Daily', 'Entertainment', 'Shopping', 'Work', 'Study', 'Others']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
